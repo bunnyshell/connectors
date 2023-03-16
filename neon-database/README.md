@@ -15,6 +15,16 @@ You will need to supply from Neon:
 - the Project ID; go to Home > {{ YOUR_PROJECT }} > Settings and get the `Project ID`
 - the source Branch ID; go to Home > {{ YOUR_PROJECT }} > Branches > {{ YOUR_SOURCE_BRANCH }} and get the `ID` (it starts with `br-`)
 
+## How to add the Connector
+
+You can add the code either from the UI, from the **Add Component** button, or manually.
+
+After adding the code to the Configuration editor, make sure to replace the placeholders:
+- `[[BNS_COMPONENT_NAME]]` with your chosen name for the component, eg. `neon-database`
+- `[[NEON_API_TOKEN]]` (see Pre-requisites)
+- `[[NEON_PROJECT_ID]]` (see Pre-requisites)
+- `[[NEON_SOURCE_BRANCH_ID]]` (see Pre-requisites)
+
 ## How to use the Connector
 
 In the backend Component(s) which use the database, you will need to set the host exported from the Neon Component as an environment variable.

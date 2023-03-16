@@ -1,0 +1,18 @@
+kind: GenericComponent
+name: [[BNS_COMPONENT_NAME]]
+runnerImage: bunnyshell/basic-runner-image:0.1.0
+deploy:
+    - curl -L -o create_database.sh https://raw.githubusercontent.com/bunnyshell/connectors/main/neon-database/scripts/create_database.sh
+    - ./create_database.sh
+destroy:
+    - curl -L -o delete_database.sh https://raw.githubusercontent.com/bunnyshell/connectors/main/neon-database/scripts/delete_database.sh
+    - ./delete_database.sh
+exportVariables:
+    - DB_HOST
+    - BRANCH_ID
+environment:
+    API_TOKEN: [[NEON_API_TOKEN]]
+    BRANCH_ID: '{{ components.[[BNS_COMPONENT_NAME]].exported.BRANCH_ID }}'
+    PROJECT_ID: [[NEON_PROJECT_ID]]
+    SOURCE_BRANCH_ID: [[NEON_SOURCE_BRANCH_ID]]
+    TARGET_BRANCH_NAME: 'bns-{{ env.unique}}'

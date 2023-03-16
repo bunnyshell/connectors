@@ -1,10 +1,10 @@
-# Neon
+# About Neon
 
 [Neon](https://neon.tech/) is a serverless Postgres database which offers autoscaling, branching, and bottomless storage.
 
 Neon's [branching feature](https://neon.tech/branching) is particularly well-suited for development and ephemeral environments, as you can now instantly have an isolated database (or more) for your environment.
 
-# Bunnyshell connector
+# Bunnyshell <> Neon connector
 
 Bunnyshell can leverage Neon databases by adding a `GenericComponent` within the Environment.
 

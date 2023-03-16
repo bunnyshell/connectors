@@ -12,6 +12,7 @@ exportVariables:
     - BRANCH_ID
 environment:
     API_TOKEN: [[NEON_API_TOKEN]]
+    DB_HOST: '{{ components.neon-database.exported.DB_HOST }}'
     BRANCH_ID: '{{ components.[[BNS_COMPONENT_NAME]].exported.BRANCH_ID }}'
     PROJECT_ID: [[NEON_PROJECT_ID]]
     SOURCE_BRANCH_ID: [[NEON_SOURCE_BRANCH_ID]]

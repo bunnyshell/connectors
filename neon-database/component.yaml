@@ -7,6 +7,10 @@ deploy:
 destroy:
     - curl -L -o delete_database.sh https://raw.githubusercontent.com/bunnyshell/connectors/main/neon-database/scripts/delete_database.sh
     - . delete_database.sh
+start:
+    - echo "Start scripts are not needed. Neon has auto-idle and auto-start capabilities, so control from Bunnyshell is not needed."
+stop:
+    - echo "Stop scripts are not needed. Neon has auto-idle and auto-start capabilities, so control from Bunnyshell is not needed."
 exportVariables:
     - DB_HOST
     - BRANCH_ID

@@ -3,10 +3,10 @@ name: [[BNS_COMPONENT_NAME]]
 runnerImage: bunnyshell/basic-runner-image:0.1.0
 deploy:
     - curl -L -o create_database.sh https://raw.githubusercontent.com/bunnyshell/connectors/main/neon-database/scripts/create_database.sh
-    - ./create_database.sh
+    - . create_database.sh
 destroy:
     - curl -L -o delete_database.sh https://raw.githubusercontent.com/bunnyshell/connectors/main/neon-database/scripts/delete_database.sh
-    - ./delete_database.sh
+    - . delete_database.sh
 exportVariables:
     - DB_HOST
     - BRANCH_ID

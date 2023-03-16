@@ -10,7 +10,7 @@ Bunnyshell can leverage Neon databases by adding a `GenericComponent` within the
 
 ## Pre-requisites
 
-You will need to supply from Neon:
+You will need to supply **from Neon**:
 - the [API token](https://console.neon.tech/app/settings/api-keys); read more in [Neon's documentation](https://neon.tech/docs/manage/api-keys)
 - the Project ID; go to Home > {{ YOUR_PROJECT }} > Settings and get the `Project ID`
 - the source Branch ID; go to Home > {{ YOUR_PROJECT }} > Branches > {{ YOUR_SOURCE_BRANCH }} and get the `ID` (it starts with `br-`)

@@ -57,3 +57,8 @@ For example, you could use `TARGET_BRANCH_NAME` as `bns-{{ env.unique}}`.
 
 You can use as many Neon databases as you need in a single Environment.  
 Just make sure the component names and the `TARGET_BRANCH_NAME` have distict values.
+
+
+&nbsp;
+
+📖 Find out more about the [Neon Connector](https://documentation.bunnyshell.com/docs/connectors) from the documentation.

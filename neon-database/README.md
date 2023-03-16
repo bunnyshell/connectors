@@ -61,4 +61,4 @@ Just make sure the component names and the `TARGET_BRANCH_NAME` have distict val
 
 &nbsp;
 
-📖 Find out more about the [Neon Connector](https://documentation.bunnyshell.com/docs/connectors) from the documentation.
+📖 Find out more about the [Neon Connector](https://documentation.bunnyshell.com/docs/connectors-neon-database) from the documentation.

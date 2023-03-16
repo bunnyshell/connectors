@@ -6,7 +6,11 @@ Neon's [branching feature](https://neon.tech/branching) is particularly well-sui
 
 # Bunnyshell <> Neon connector
 
-Bunnyshell can leverage Neon databases by adding a `GenericComponent` within the Environment.
+Bunnyshell can leverage Neon to create database branches when an Environment is deployed, and have them destroyed when an Environment is deleted from Bunnyshell.
+
+**Effectively, this means being able to create ephemeral PostgreSQL databases for ephemeral environments.**
+
+Neon can be connected to Bunnyshell by adding a `GenericComponent` within the Environment.
 
 ## Pre-requisites
 

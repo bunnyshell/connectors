@@ -40,13 +40,8 @@ components:
         ...
         dockerCompose:
             environment:
-                POSTGRES_HOST: '{{ components.<<BNS_COMPONENT_NAME>>.exported.DB_HOST }}'
+                POSTGRES_HOST: '{{ components.neon-database.exported.DB_HOST }}'
                 ...
-```
-
-Example for a component named `neon-database`:
-```
-POSTGRES_HOST: '{{ components.neon-database.exported.DB_HOST }}'
 ```
 
 ### Neon branch name

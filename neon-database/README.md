@@ -24,7 +24,6 @@ You will need to supply **from Neon**:
 You can add the code either from the UI, from the **Add Component** button, or manually.
 
 After adding the code to the Configuration editor, make sure to replace the placeholders:
-- `[[BNS_COMPONENT_NAME]]` with your chosen name for the component, eg. `neon-database`
 - `[[NEON_API_TOKEN]]` (see Pre-requisites)
 - `[[NEON_PROJECT_ID]]` (see Pre-requisites)
 - `[[NEON_SOURCE_BRANCH_ID]]` (see Pre-requisites)

@@ -1,5 +1,5 @@
 kind: GenericComponent
-name: [[BNS_COMPONENT_NAME]]
+name: neon-database
 runnerImage: bunnyshell/basic-runner-image:0.1.0
 deploy:
     - curl -L -o create_database.sh https://raw.githubusercontent.com/bunnyshell/connectors/main/neon-database/scripts/create_database.sh
@@ -16,8 +16,8 @@ exportVariables:
     - BRANCH_ID
 environment:
     API_TOKEN: [[NEON_API_TOKEN]]
-    DB_HOST: '{{ components.[[BNS_COMPONENT_NAME]].exported.DB_HOST }}'
-    BRANCH_ID: '{{ components.[[BNS_COMPONENT_NAME]].exported.BRANCH_ID }}'
+    DB_HOST: '{{ components.neon-database.exported.DB_HOST }}'
+    BRANCH_ID: '{{ components.neon-database.exported.BRANCH_ID }}'
     PROJECT_ID: [[NEON_PROJECT_ID]]
     SOURCE_BRANCH_ID: [[NEON_SOURCE_BRANCH_ID]]
     TARGET_BRANCH_NAME: 'bns-{{ env.unique}}'

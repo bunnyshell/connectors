@@ -1,0 +1,28 @@
+kind: GenericComponent
+name: planetscale-database
+runnerImage: bunnyshell/basic-runner-image:0.1.0
+deploy:
+    - curl -L -o create_database.sh https://raw.githubusercontent.com/bunnyshell/connectors/main/planetscale-database/scripts/create_database.sh
+    - . create_database.sh
+destroy:
+    - curl -L -o delete_database.sh https://raw.githubusercontent.com/bunnyshell/connectors/main/planetscale-database/scripts/delete_database.sh
+    - . delete_database.sh
+start:
+    - echo "Start scripts are not needed. PlanetScale has auto-idle and auto-start capabilities, so control from Bunnyshell is not needed."
+stop:
+    - echo "Stop scripts are not needed. PlanetScale has auto-idle and auto-start capabilities, so control from Bunnyshell is not needed."
+exportVariables:
+    - DB_HOST
+    - DB_USERNAME
+    - DB_PASSWORD
+environment:
+    ORGANIZATION: [[PLANETSCALE_ORGANIZATION]]
+    DATABASE: [[PLANETSCALE_DB]]
+    SERVICE_TOKEN_ID: [[PLANETSCALE_SERVICE_TOKEN_ID]]
+    SERVICE_TOKEN: [[PLANETSCALE_SERVICE_TOKEN]]
+    TARGET_BRANCH_NAME: 'bns-{{ env.unique}}'
+    SOURCE_BRANCH_NAME: main
+    DB_HOST: '{{ components.planetscale-database.exported.DB_HOST }}'
+    DB_USERNAME: '{{ components.planetscale-database.exported.DB_USERNAME }}'
+    DB_PASSWORD: '{{ components.planetscale-database.exported.DB_PASSWORD }}'
+

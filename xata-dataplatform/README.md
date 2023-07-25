@@ -49,15 +49,15 @@ components:
 
 ### Xata branch name
 
-You can name your Xata branches as you like, as long as they're unique. The name can be passed to the Xata Component as an environment variable called `TARGET_BRANCH_NAME`.
+You can name your Xata branches as you like, as long as they're unique. The name can be passed to the Xata Component as an environment variable called `TARGET_BRANCH`.
 
-For example, you could use `TARGET_BRANCH_NAME` as `bns-{{ env.unique}}`.  
+For example, you could use `TARGET_BRANCH` as `bns-{{ env.unique}}`.  
 `{{ env.unique}}` is an unique identifier for an Environment in Bunnyshell and will be interpolated in the actual value of the Environment variable, resulting in something similar to `bns-4wgffz`.
 
 ### Multiple Xata instances in an Environment
 
 You can use as many Xata databases as you need in a single Environment.  
-Just make sure the component names and the `TARGET_BRANCH_NAME` have distict values.
+Just make sure the component names and the `TARGET_BRANCH` have distict values.
 
 
 &nbsp;

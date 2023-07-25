@@ -41,7 +41,9 @@ components:
         ...
         dockerCompose:
             environment:
-                XATA_HOST: '{{ components.xata-database.exported.DB_HOST }}'
+                XATA_API_KEY: '{{ components.xata-database.exported.API_TOKEN }}'
+                XATA_DATABASE_URL: '{{ components.xata-database.exported.DB_HOST }}'
+                XATA_BRANCH: '{{ components.xata-database.exported.TARGET_BRANCH }}'
                 ...
 ```
 

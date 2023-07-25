@@ -12,8 +12,10 @@ start:
 stop:
     - echo "Stop scripts are not needed. Xata has auto-idle and auto-start capabilities, so control from Bunnyshell is not needed."
 exportVariables:
-    - DB_HOST
+    - API_TOKEN
     - BRANCH_ID
+    - DB_HOST
+    - TARGET_BRANCH
 environment:
     API_TOKEN: [[XATA_API_TOKEN]]
     WORKSPACE: [[XATA_WORKSPACE]]

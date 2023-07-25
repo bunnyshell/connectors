@@ -51,7 +51,7 @@ if [ "$create_branch_response_code" -eq 201 ]; then
     existing_branch_response_code=$(echo "$existing_branch_response" | tail -n1)
     existing_branch_response_body=$(echo "$existing_branch_response" | sed '$d')
 
-    DB_HOST="https://$WORKSPACE.$REGION.xata.sh/db/$DB_NAME:$TARGET_BRANCH"
+    DB_HOST="https://$WORKSPACE.$REGION.xata.sh/db/$DB_NAME"
     BRANCH_ID=$(echo "$existing_branch_response_body" | jq -r '.id')
 
     echo "Host: $DB_HOST"
